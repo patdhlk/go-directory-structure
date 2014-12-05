@@ -86,7 +86,7 @@ func (d Directory) traverseTree(visitor TreeVisitor, isLast bool) {
 		for i, sd := range d.children {
 			sd.traverseTree(visitor, i == len(d.children)-1)
 		}
-		visitor.GoDown(d, isLast)
+		visitor.GoUp(d, isLast)
 	}
 }
 
