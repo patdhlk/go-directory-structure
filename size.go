@@ -14,5 +14,5 @@ func (s Size) String() string {
 		s = s / 1000
 		i++
 	}
-	return strconv.FormatInt(int64(s), +" "+suffix[i])
+	return strconv.FormatInt(int64(s), 10) + " " + suffix[i]
 }
