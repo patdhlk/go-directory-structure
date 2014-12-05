@@ -5,11 +5,12 @@ import (
 )
 
 func main() {
-	root := flag.String("path", ".", "path to list")
+	root := flag.String("C:/", ".", "path to list")
 	depth := flag.Int("depth", 10, "maximal depth")
 	size := flag.Int64("size", 0, "min dir size to expand")
 	flag.Parse()
 
 	d := New(*root)
-	//output is missing
+	d.Printing(*depth, Size(*size))
+
 }
