@@ -60,3 +60,10 @@ func (d Directories) Less(i, j int) bool {
 func (d Directories) Swap(i, j int) {
 	d[i], d[j] = d[j], d[i]
 }
+
+func (d Directory) Traverse(visitor Visitor) {
+	visitor.Visit(d)
+	for _, sd := range d.children {
+		sd.Traverse(visitor)
+	}
+}

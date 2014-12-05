@@ -10,4 +10,6 @@ func main() {
 	size := flag.Int64("size", 0, "min dir size to expand")
 	flag.Parse()
 
+	d := New(*root)
+	//output is missing
 }
